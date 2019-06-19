@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - none
 
+## [0.0.2] - 19-Jun-2019
+### Added
+- Added Tiny Rating Bar.
+
 ## [0.0.1] - 19-Jun-2019
 ### Added
 - Added Tiny Container Widget.
