@@ -45,8 +45,8 @@ class TinyContainer extends StatelessWidget {
   /// Defaults to : FontWeight.normal.
   final FontWeight fontWeight;
 
-  /// TextDecoration given to [Text] widget if child == null.
-  /// Defaults to : [Null]
+  /// TextDecoration given to [Text] widget if child == null,
+  /// Defaults to : [Null].
   final TextDecoration textDecoration;
 
   /// If non-null, [TinyContainer] is wrapped in [InkWell].
@@ -64,6 +64,14 @@ class TinyContainer extends StatelessWidget {
   /// AlignmentGeometry of [Container] child,
   /// Defaults to : Alignment.center.
   final AlignmentGeometry alignment;
+
+  /// if non-null [TinyContainer] is wrapped in Padding,
+  /// Defaults to : [Null].
+  final EdgeInsets outerPadding;
+
+  /// if non-null innerPadding is given to [Container],
+  /// Defaults to : [Null].
+  final EdgeInsets innerPadding;
 
   /// This Class can be used as Const as it requires no non-const Attr.
   const TinyContainer({
@@ -84,6 +92,8 @@ class TinyContainer extends StatelessWidget {
     this.boxFit = BoxFit.scaleDown,
     this.child,
     this.alignment = Alignment.center,
+    this.outerPadding,
+    this.innerPadding,
   })  : assert(child != null || text != null),
         super(key: key);
 
@@ -125,6 +135,7 @@ class TinyContainer extends StatelessWidget {
       width: maxWidth ?? MediaQuery.of(context).size.width * 0.25,
       height: maxHeight ?? MediaQuery.of(context).size.height * 0.06,
       child: Container(
+        padding: innerPadding,
         width: width ?? MediaQuery.of(context).size.width * 0.15,
         height: height ?? MediaQuery.of(context).size.height * 0.03,
         decoration: BoxDecoration(
@@ -142,6 +153,13 @@ class TinyContainer extends StatelessWidget {
     if (onTap != null) {
       finalWidget = InkWell(
         onTap: onTap,
+        child: finalWidget,
+      );
+    }
+    // adding OuterPadding Feature
+    if (outerPadding != null) {
+      finalWidget = Padding(
+        padding: outerPadding,
         child: finalWidget,
       );
     }
