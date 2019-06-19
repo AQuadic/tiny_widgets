@@ -1,0 +1,19 @@
+name: tiny_widgets_example
+description: Tiny Widgets Example
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  tiny_widgets:
+    path: ../ # this is a relative path, don't use it in your project instead use the one described in main README.md
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

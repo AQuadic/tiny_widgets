@@ -1,0 +1,19 @@
+name: tiny_widgets
+description: Common Widgets Used by Tiny's Co.
+version: 0.0.1
+author: Tiny Programmers
+homepage: http://TinyProgrammers.ga
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+# add assets here
