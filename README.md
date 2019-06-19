@@ -13,8 +13,8 @@ Okay we shouldn't talk much and let our work impress you!
 ## Features and Screenshots.
 
 | Widget Name | Screenshot | Sourcecode | Example |
-|---|---| --- | --- |
-| Tiny Container | <img src="https://github.com/TinyProgrammers/tiny_widgets/raw/master/screenshots/tiny_container.png" width="200"> | [Click](lib/src/tiny_container.dart) | [Click](example/lib/src/tiny_container.dart) |
+|:-:|:--:|:--:|:--:|
+| TinyContainer | <img src="https://github.com/TinyProgrammers/tiny_widgets/raw/master/screenshots/tiny_container.png" width="200"> | [Click](lib/src/tiny_container.dart) | [Click](example/lib/src/tiny_container.dart) |
 
 
 ## Getting Started
