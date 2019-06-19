@@ -45,6 +45,10 @@ class TinyContainer extends StatelessWidget {
   /// Defaults to : FontWeight.normal.
   final FontWeight fontWeight;
 
+  /// TextDecoration given to [Text] widget if child == null.
+  /// Defaults to : [Null]
+  final TextDecoration textDecoration;
+
   /// If non-null, [TinyContainer] is wrapped in [InkWell].
   /// Defaults to : [Null].
   final VoidCallback onTap;
@@ -75,6 +79,7 @@ class TinyContainer extends StatelessWidget {
     this.backgroundColor = const Color(0xFF6D6DFF),
     this.textColor = Colors.white,
     this.fontWeight = FontWeight.normal,
+    this.textDecoration,
     this.onTap,
     this.boxFit = BoxFit.scaleDown,
     this.child,
@@ -105,6 +110,7 @@ class TinyContainer extends StatelessWidget {
           textScaleFactor: textScaleFactor,
           style: TextStyle(
             // TODO: Let this use Theme Data
+            decoration: textDecoration,
             color: textColor,
             fontWeight: fontWeight,
             fontSize: fontSize,
