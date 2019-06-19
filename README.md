@@ -13,8 +13,8 @@ Okay we shouldn't talk much and let our work impress you!
 ## Features and Screenshots.
 
 | Widget Name | Screenshot | Sourcecode | Example |
-|---|---| --- | --- |
-| Tiny Container | ![Tiny Container Image][Tiny Container Image] | [Click](lib/src/tiny_container.dart) | [Click](example/lib/src/tiny_container.dart) |
+|:-:|:--:|:--:|:--:|
+| TinyContainer | <img src="https://github.com/TinyProgrammers/tiny_widgets/raw/master/screenshots/tiny_container.png" width="200"> | [Click](lib/src/tiny_container.dart) | [Click](example/lib/src/tiny_container.dart) |
 
 
 ## Getting Started
@@ -45,6 +45,3 @@ import 'package:tiny_widgets/tiny_widgets.dart';
 ### Issues and feedback
 
 Please file [issues](https://github.com/tinyprogrammers/tiny_widgets/issues/new) to send feedback or report a bug. Thank you!
-
-
-[Tiny Container Image]: screenshots/tiny_container.png
