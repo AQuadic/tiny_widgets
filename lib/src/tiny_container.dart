@@ -81,6 +81,10 @@ class TinyContainer extends StatelessWidget {
   /// Defaults to : [Null].
   final List<BoxShadow> boxShadow;
 
+  /// if non-null textAlign is given to [Text],
+  /// Defaults to : [Null].
+  final TextAlign textAlign;
+
   /// This Class can be used as Const as it requires no non-const Attr.
   const TinyContainer({
     Key key,
@@ -104,6 +108,7 @@ class TinyContainer extends StatelessWidget {
     this.innerPadding,
     this.border,
     this.boxShadow,
+    this.textAlign,
   })  : assert(child != null || text != null),
         super(key: key);
 
@@ -128,6 +133,7 @@ class TinyContainer extends StatelessWidget {
         child: Text(
           _fixEmptyText(text),
           textScaleFactor: textScaleFactor,
+          textAlign: textAlign,
           style: TextStyle(
             // TODO: Let this use Theme Data
             decoration: textDecoration,
