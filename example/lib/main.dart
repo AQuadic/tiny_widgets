@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'src/tiny_container.dart';
+import 'package:tiny_widgets_example/src/tiny_container.dart';
 
 void main() => runApp(TinyApp());
 

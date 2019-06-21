@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tiny_widgets/src/tiny_container.dart';
+import 'package:tiny_widgets/tiny_widgets.dart';
 
 class TinyContainerExample extends StatelessWidget {
   @override
