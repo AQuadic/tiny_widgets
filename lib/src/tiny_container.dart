@@ -73,6 +73,14 @@ class TinyContainer extends StatelessWidget {
   /// Defaults to : [Null].
   final EdgeInsets innerPadding;
 
+  /// if non-null border is given to [Container],
+  /// Defaults to : [Null].
+  final BoxBorder border;
+
+  /// if non-null boxShadow is given to [Container],
+  /// Defaults to : [Null].
+  final List<BoxShadow> boxShadow;
+
   /// This Class can be used as Const as it requires no non-const Attr.
   const TinyContainer({
     Key key,
@@ -94,6 +102,8 @@ class TinyContainer extends StatelessWidget {
     this.alignment = Alignment.center,
     this.outerPadding,
     this.innerPadding,
+    this.border,
+    this.boxShadow,
   })  : assert(child != null || text != null),
         super(key: key);
 
@@ -139,6 +149,8 @@ class TinyContainer extends StatelessWidget {
         width: width ?? MediaQuery.of(context).size.width * 0.15,
         height: height ?? MediaQuery.of(context).size.height * 0.03,
         decoration: BoxDecoration(
+          boxShadow: boxShadow,
+          border: border,
           color: backgroundColor,
           borderRadius: BorderRadius.all(
             Radius.circular(5),
