@@ -21,6 +21,8 @@ class TinyMatchCard extends StatelessWidget {
   final String groupText;
 
   final VoidCallback onTap;
+  
+  final VoidCallback onLongTap;
 
   const TinyMatchCard({
     Key key,
@@ -32,6 +34,7 @@ class TinyMatchCard extends StatelessWidget {
     @required this.dateText,
     @required this.groupText,
     this.onTap,
+    this.onLongTap,
   }) : super(key: key);
 
   @override
@@ -78,6 +81,7 @@ class TinyMatchCard extends StatelessWidget {
 
     if (onTap != null) {
       widget = InkWell(
+        onLongPress: onLongTap,
         onTap: onTap,
         child: widget,
       );
