@@ -79,7 +79,7 @@ class TinyMatchCard extends StatelessWidget {
       ],
     );
 
-    if (onTap != null) {
+    if (onTap != null || onLongTap != null) {
       widget = InkWell(
         onLongPress: onLongTap,
         onTap: onTap,
