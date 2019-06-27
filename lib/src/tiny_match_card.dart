@@ -23,7 +23,7 @@ class TinyMatchCard extends StatelessWidget {
   final String groupText;
 
   final VoidCallback onTap;
-  
+
   final VoidCallback onLongTap;
 
   const TinyMatchCard({
@@ -32,7 +32,7 @@ class TinyMatchCard extends StatelessWidget {
     @required this.firstTeamFlag,
     @required this.secondTeam,
     @required this.secondTeamFlag,
-     this.versesText = "VS",
+    this.versesText = "VS",
     @required this.timeText,
     @required this.dateText,
     @required this.groupText,
