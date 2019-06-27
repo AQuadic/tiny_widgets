@@ -16,6 +16,8 @@ class TinyMatchCard extends StatelessWidget {
 
   final String timeText;
 
+  final String versesText;
+
   final String dateText;
 
   final String groupText;
@@ -30,6 +32,7 @@ class TinyMatchCard extends StatelessWidget {
     @required this.firstTeamFlag,
     @required this.secondTeam,
     @required this.secondTeamFlag,
+     this.versesText = "VS",
     @required this.timeText,
     @required this.dateText,
     @required this.groupText,
@@ -65,6 +68,7 @@ class TinyMatchCard extends StatelessWidget {
                 flagWidget: firstTeamFlag,
               ),
               VersesContainer(
+                versesText: versesText,
                 timeText: timeText,
                 dateText: dateText,
                 groupText: groupText,
