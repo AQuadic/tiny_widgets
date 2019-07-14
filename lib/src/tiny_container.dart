@@ -112,7 +112,8 @@ class TinyContainer extends StatelessWidget {
     this.innerPadding,
     this.border,
     this.boxShadow,
-    this.textAlign, this.borderRadius = 5,
+    this.textAlign,
+    this.borderRadius = 5,
   })  : assert(child != null || text != null),
         super(key: key);
 
