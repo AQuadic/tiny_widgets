@@ -30,7 +30,7 @@ class TinyRating extends StatelessWidget {
   final bool allowHalfRating;
 
   /// spacing between Stars, this is given to [Wrap],
-  /// Defaults to : [Null].
+  /// Defaults to : 0.0.
   final double spacing;
 
   /// Color is given to unSelected [Icon],
@@ -62,7 +62,7 @@ class TinyRating extends StatelessWidget {
     this.unSelectedColor,
     this.starSize = 24.0,
     this.allowHalfRating = true,
-    this.spacing,
+    this.spacing = 0.0,
     this.backgroundColor = Colors.transparent,
     this.wrapAlignment = WrapAlignment.start,
     this.selectedIcon = Icons.star,
