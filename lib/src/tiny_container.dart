@@ -5,6 +5,10 @@ class TinyContainer extends StatelessWidget {
   /// Defaults to : MediaQuery.of(context).size.width * 0.25.
   final double maxWidth;
 
+  /// borderRadius given to [Container],
+  /// Defaults to: 5
+  final double borderRadius;
+
   /// Requires the child to have exactly this height, it's assigned to external [SizedBox].
   /// Defaults to : MediaQuery.of(context).size.height * 0.06.
   final double maxHeight;
@@ -108,7 +112,7 @@ class TinyContainer extends StatelessWidget {
     this.innerPadding,
     this.border,
     this.boxShadow,
-    this.textAlign,
+    this.textAlign, this.borderRadius = 5,
   })  : assert(child != null || text != null),
         super(key: key);
 
@@ -159,7 +163,7 @@ class TinyContainer extends StatelessWidget {
           border: border,
           color: backgroundColor,
           borderRadius: BorderRadius.all(
-            Radius.circular(5),
+            Radius.circular(borderRadius),
           ),
         ),
         alignment: alignment,
