@@ -83,7 +83,7 @@ class TinyRating extends StatelessWidget {
         size: starSize,
       );
       // if Selected Stars with half Rating
-    } else if (index > rating - (allowHalfRating ? 0.5 : 1.0) &&
+    } else if (index >= rating - (allowHalfRating ? 0.5 : 1.0) &&
         index < rating) {
       icon = Icon(
         halfSelectedIcon,
