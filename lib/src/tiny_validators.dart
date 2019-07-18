@@ -33,6 +33,23 @@ class TinyValidators {
     }
   }
 
+  /// Validating for URLs
+  // may need improvement
+  String urlValidator(String value) {
+    if (value.length < 1)
+      return 'Can\'t be empty';
+    else {
+      if (value.length > 7 &&
+          value.contains('http') &&
+          value.contains('/') &&
+          value.contains('.')) {
+        return null;
+      } else {
+        return 'Please Enter Strong Pass with Letters and Numbers';
+      }
+    }
+  }
+
   /// Validating name (just can't be empty for now)
   String nameValidator(String value) {
     if (value.length < 1)
