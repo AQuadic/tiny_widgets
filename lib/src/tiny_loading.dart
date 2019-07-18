@@ -30,10 +30,17 @@ class TinyLoading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: CircularProgressIndicator(
-        backgroundColor:
-            this.color ?? Color(customColor) ?? Colors.deepPurpleAccent,
+        backgroundColor: this.color == null
+            ? this.customColor == null
+                ? Colors.deepPurpleAccent
+                : this.customColor
+            : this.color,
         valueColor: AlwaysStoppedAnimation<Color>(
-          this.verColor ?? Color(verCustomColor) ?? Colors.deepPurple,
+          this.verColor == null
+              ? this.verCustomColor == null
+                  ? Colors.deepPurple
+                  : this.verCustomColor
+              : this.verColor,
         ),
       ),
     );
