@@ -25,7 +25,7 @@ class TinyValidators {
       if (value.length > 6 &&
           value.contains(RegExp('[A-Z]')) &&
           value.contains(RegExp('[a-z]')) &&
-          value.contains(RegExp('[1-9]'))) {
+          value.contains(RegExp('[0-9]'))) {
         return null;
       } else {
         return 'Please Enter Strong Pass with Letters and Numbers';
@@ -46,10 +46,10 @@ class TinyValidators {
     if (value.length < 1)
       return 'Can\'t be empty';
     else if (value.length == 11 &&
-        (value.substring(0, 2) == '010' ||
-            value.substring(0, 2) == '011' ||
-            value.substring(0, 2) == '012' ||
-            value.substring(0, 2) == '015') &&
+        (value.substring(0, 3) == '010' ||
+            value.substring(0, 3) == '011' ||
+            value.substring(0, 3) == '012' ||
+            value.substring(0, 3) == '015') &&
         !value.contains(RegExp('[a-z]')) &&
         !value.contains(RegExp('[A-Z]')))
       return null;
