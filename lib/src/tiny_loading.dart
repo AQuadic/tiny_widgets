@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TinyLoadingPopUp {
+  final Color color;
+  final Color verColor;
+  final int customColor;
+  final int verCustomColor;
+
+  TinyLoadingPopUp(
+      {this.color, this.verColor, this.customColor, this.verCustomColor});
+
   tinyLoading(BuildContext context) {
     return showDialog(
       context: context,
@@ -9,7 +17,12 @@ class TinyLoadingPopUp {
         return WillPopScope(
           onWillPop: () async => false,
           child: Center(
-            child: TinyLoading(),
+            child: TinyLoading(
+              color: color,
+              verColor: verColor,
+              customColor: customColor,
+              verCustomColor: verCustomColor,
+            ),
           ),
         );
       },
