@@ -45,6 +45,22 @@ class TinyContainer extends StatelessWidget {
   /// Defaults to : Colors.white.
   final Color textColor;
 
+  /// Color given to [InkWell] widget if child == null.
+  /// Defaults to : Colors.transparent.
+  final Color hoverColor;
+
+  /// Color given to [InkWell] widget if child == null.
+  /// Defaults to : Colors.transparent.
+  final Color splashColor;
+
+  /// Color given to [InkWell] widget if child == null.
+  /// Defaults to : Colors.transparent.
+  final Color focusColor;
+
+  /// Color given to [InkWell] widget if child == null.
+  /// Defaults to : Colors.transparent.
+  final Color highlightColor;
+
   /// FontWeight given to [Text] widget if child == null.
   /// Defaults to : FontWeight.normal.
   final FontWeight fontWeight;
@@ -102,6 +118,10 @@ class TinyContainer extends StatelessWidget {
     this.fontFamily = "Hacen",
     this.backgroundColor = const Color(0xFF6D6DFF),
     this.textColor = Colors.white,
+    this.hoverColor: Colors.transparent,
+    this.highlightColor: Colors.transparent,
+    this.focusColor: Colors.transparent,
+    this.splashColor: Colors.transparent,
     this.fontWeight = FontWeight.normal,
     this.textDecoration,
     this.onTap,
@@ -175,6 +195,10 @@ class TinyContainer extends StatelessWidget {
     // adding Tab Feature
     if (onTap != null) {
       finalWidget = InkWell(
+        hoverColor: hoverColor,
+        highlightColor: hoverColor,
+        focusColor: hoverColor,
+        splashColor: hoverColor,
         onTap: onTap,
         child: finalWidget,
       );
